@@ -13,7 +13,7 @@ app.use(express.json());
 //Middleware
 
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome</h1>");
+  res.send("<h1>Welcome-job-search</h1>");
 });
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", jobRouter);
