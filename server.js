@@ -22,7 +22,7 @@ async function startServerWithDataConnection() {
     });
 
     server.listen(PORT, () =>
-      console.log(`server listening on port: ${PORT}...!!`)
+      console.log(`server listening on port: ${PORT}...`)
     );
   } catch (error) {
     console.log("server didn't start", error);

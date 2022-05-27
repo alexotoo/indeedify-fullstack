@@ -12,9 +12,12 @@ app.use(express.json());
 
 //Middleware
 
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome-job-search</h1>");
+app.get("/api/v1", (req, res) => {
+  res.json({ msg: "hello there API" });
 });
+// app.get("/", (req, res) => {
+//   res.send("<h1>Welcome-job-search</h1>");
+// });
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", jobRouter);
 
