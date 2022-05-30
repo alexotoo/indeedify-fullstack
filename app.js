@@ -1,5 +1,6 @@
 import express from "express";
 import "express-async-errors";
+import morgan from "morgan";
 import cors from "cors";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
 import notFoundMiddleware from "./middleware/not-found.js";
@@ -7,6 +8,10 @@ import authRouter from "./routes/authRoutes.js";
 import jobRouter from "./routes/jobsRoutes.js";
 
 const app = express();
+
+if (process.env.NODE_ENV !== "production") {
+  app.use(morgan("dev"));
+}
 app.use(express.json());
 app.use(cors());
 
